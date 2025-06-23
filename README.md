@@ -22,7 +22,7 @@
 3. [💬 Investment Community Platform (투자 커뮤니티)](#-3-investment-community-platform-투자-커뮤니티)
 4. [📊 Technical Analysis Chart System (기술적 분석 차트)](#-4-technical-analysis-chart-system-기술적-분석-차트)
 5. [👤 User Management System (사용자 관리 시스템)](#-5-user-management-system-사용자-관리-시스템)
-6. [🏗️ System Architecture and DevOps](#-6-system-architecture-and-devops)
+6. [🏗️ System Architecture and DevOps](#-6-System-Architecture-and-DevOps)
 7. [🔐 보안/접근 관련 안내](#-보안접근-관련-안내)
 8. [🧠 Why This Portfolio?](#-why-this-portfolio)
 9. [📈 프로젝트 성과 및 기술적 도전](#-프로젝트-성과-및-기술적-도전)
@@ -40,11 +40,11 @@
 4. [⭐ 14. Favorite & Category System (즐겨찾기 및 카테고리)](#-14-즐겨찾기-및-카테고리-시스템)
 5. [📰 15. Cooking News Feed (요리 뉴스 시스템)](#-15-요리-뉴스-시스템)
 6. [👤 16. User Management System (사용자 관리 시스템)](#-16-사용자-관리-시스템)
-7. [🏗️ 17. System Architecture and DevOps](#-17-시스템-아키텍처-and-devops)
+7. [🏗️ 17. System Architecture and DevOps](#-17-System-Architecture-and-DevOps)
 
-8. [🧠 18. Why This Portfolio?](#-19-why-this-portfolio)
+8. [🧠 18. Why This Portfolio?](#-18-why-this-portfolio)
 
-9.[📈 19. 프로젝트 성과 및 기술적 도전](#-20-프로젝트-성과-및-기술적-도전)
+9.[📈 19. 프로젝트 성과 및 기술적 도전](#-19-프로젝트-성과-및-기술적-도전)
 
 ### 🎥 프로젝트 영상 시연 보기  
 [📺 Click to watch demo](https://youtu.be/your_video_link)
@@ -536,7 +536,7 @@ User (Django Auth)
 
 ---
 
-## 🏗️ 17. 시스템 아키텍처 and DevOps
+## 🏗️ 17. System Architecture and DevOps
 
 ### 🛠️ 인프라 구성
 - **서버**: AWS EC2 (Ubuntu 22.04)
