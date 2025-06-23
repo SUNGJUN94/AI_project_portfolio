@@ -22,7 +22,7 @@
 3. [💬 Investment Community Platform (투자 커뮤니티)](#-3-investment-community-platform-투자-커뮤니티)
 4. [📊 Technical Analysis Chart System (기술적 분석 차트)](#-4-technical-analysis-chart-system-기술적-분석-차트)
 5. [👤 User Management System (사용자 관리 시스템)](#-5-user-management-system-사용자-관리-시스템)
-6. [🏗️ System Architecture & DevOps](#-6-system-architecture--devops)
+6. [🏗️ System Architecture & DevOps](#-6-system-architecture-&-devops)
 7. [🔐 보안/접근 관련 안내](#-보안접근-관련-안내)
 8. [🧠 Why This Portfolio?](#-why-this-portfolio)
 9. [📈 프로젝트 성과 및 기술적 도전](#-프로젝트-성과-및-기술적-도전)
@@ -40,7 +40,7 @@
 4. [⭐ 14. Favorite & Category System (즐겨찾기 및 카테고리)](#-14-즐겨찾기-및-카테고리-시스템)
 5. [📰 15. Cooking News Feed (요리 뉴스 시스템)](#-15-요리-뉴스-시스템)
 6. [👤 16. User Management System (사용자 관리 시스템)](#-16-사용자-관리-시스템)
-7. [🏗️ 17. System Architecture & DevOps](#-17-시스템-아키텍처--devops)
+7. [🏗️ 17. System Architecture & DevOps](#-17-시스템-아키텍처-&-devops)
 8. [🧠 18. Why This Portfolio?](#-19-why-this-portfolio)
 9.[📈 19. 프로젝트 성과 및 기술적 도전](#-20-프로젝트-성과-및-기술적-도전)
 
@@ -324,8 +324,6 @@ LSTM 모델 학습/예측
 - 📰 **요리 뉴스**: 실시간 요리 관련 뉴스 수집 및 공유
 - 📊 **인기 레시피**: 조회수 기반 인기 레시피 추천
 
----
-
 ## 🛠️ 기술 스택
 
 ### Backend
@@ -354,8 +352,6 @@ LSTM 모델 학습/예측
 - **File Handling**: Pillow 11.2.1 (이미지 처리)
 - **Scheduling**: APScheduler 3.11.0
 
----
-
 ## 🏗️ 시스템 아키텍처
 
 ### 📊 데이터베이스 구조
@@ -378,7 +374,6 @@ User (Django Auth)
     ↓
 네이버 뉴스 API → 실시간 뉴스 수집
 ```
-
 
 🔧 **핵심 구현 사항**
 - CSV 데이터 기반 레시피 데이터베이스 (24,000+ 레시피)
