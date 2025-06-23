@@ -14,8 +14,8 @@
 
 귀사의 무궁한 발전과 번영을 기원합니다.
 ---
-
-## 📌 프로젝트 요약
+---
+## 📌 Big Epoch 주식 예측 프로젝트 요약
 
 1. [📈 Quant Trading Prediction (퀀트 주가 예측 시스템)](#-1-quant-trading-prediction-퀀트-주가-예측-시스템)
 2. [🤖 AI Financial Assistant (금융 전문 챗봇)](#-2-ai-financial-assistant-금융-전문-챗봇)
@@ -30,6 +30,25 @@
 ### 🎥 프로젝트 영상 시연 보기
 [📺 Click to watch demo](https://youtu.be/your_video_link) 
 
+---
+
+## 📌 Fridge Recipick_KR 프로젝트 목차
+
+1. [🍳 1. AI Recipe Recommender (개인화된 레시피 추천 엔진)](#-1-ai-recipe-recommender-개인화된-레시피-추천-엔진)
+2. [💬 2. AI Cooking Assistant (요리 상담 챗봇)](#-2-ai-요리-상담-챗봇)
+3. [🥬 3. My Fridge Manager (내 냉장고 관리 시스템)](#-3-내-냉장고-관리-시스템)
+4. [⭐ 4. Favorite & Category System (즐겨찾기 및 카테고리)](#-4-즐겨찾기-및-카테고리-시스템)
+5. [📰 5. Cooking News Feed (요리 뉴스 시스템)](#-5-요리-뉴스-시스템)
+6. [👤 6. User Management System (사용자 관리 시스템)](#-6-사용자-관리-시스템)
+7. [🏗️ System Architecture & DevOps](#-시스템-아키텍처--devops)
+8. [🔐 보안/접근 관련 안내](#-보안접근-관련-안내)
+9. [🧠 Why This Portfolio?](#-why-this-portfolio)
+10. [📈 프로젝트 성과 및 기술적 도전](#-프로젝트-성과-및-기술적-도전)
+
+### 🎥 프로젝트 영상 시연 보기  
+[📺 Click to watch demo](https://youtu.be/your_video_link)
+
+---
 ---
 
 
@@ -65,7 +84,7 @@
 - `predict_info/management/commands/`: 자동화 스케줄러
 
 
-🔝 [프로젝트 요약으로 이동](#-프로젝트-요약)
+🔝 [프로젝트 요약으로 이동](#-Big-Epoch-주식-예측-프로젝트-요약)
 
 ---
 
@@ -283,6 +302,333 @@ LSTM 모델 학습/예측
 🔝 [프로젝트 요약으로 이동](#-프로젝트-요약)
 
 ---
+---
+
+---
+
+## 🎯 주요 기능 상세
+
+### 🤖 1. AI 레시피 추천 시스템
+**개인화된 레시피 추천 엔진**
+
+🛠️ **기술 구현**
+- 사용자 재료 분석 기반 추천 알고리즘
+- 재료 기반 레시피 매칭 시스템
+- 조회수 및 인기도 기반 추천
+
+### 🎯 핵심 기능
+- 🤖 **레시피 추천**: 사용자 실 냉장고 기반 개인화 레시피 추천
+- 💬 **AI 요리 챗봇**: GPT-3.5 기반 요리 전문 챗봇
+- 🥬 **내 냉장고 관리**: 재료 기반 레시피 검색 및 관리
+- ⭐ **즐겨찾기 시스템**: 카테고리별 레시피 즐겨찾기 관리
+- 📰 **요리 뉴스**: 실시간 요리 관련 뉴스 수집 및 공유
+- 📊 **인기 레시피**: 조회수 기반 인기 레시피 추천
+
+---
+
+## 🛠️ 기술 스택
+
+### Backend
+- **Framework**: Django 5.2.1
+- **Database**: MySQL 8.0
+- **Authentication**: Django Custom User Model
+- **Security**: Argon2 Password Hashing
+
+### AI/ML
+- **AI Chat**: OpenAI GPT-3.5 Turbo
+- **API**: OpenAI API 1.84.0
+- **Data Processing**: Pandas 2.2.3, NumPy 1.26.4
+
+### Frontend
+- **Template Engine**: Django Templates
+- **CSS Framework**: Bootstrap
+- **JavaScript**: Vanilla JS, AJAX
+- **Charts**: Chart.js (향후 확장 예정)
+
+### External APIs
+- **News API**: 네이버 뉴스 API
+- **Recipe Data**: CSV 기반 레시피 데이터베이스
+
+### Development Tools
+- **Environment**: Python-dotenv 1.1.0
+- **File Handling**: Pillow 11.2.1 (이미지 처리)
+- **Scheduling**: APScheduler 3.11.0
+
+---
+
+## 🏗️ 시스템 아키텍처
+
+### 📊 데이터베이스 구조
+```
+User (Django Auth)
+├── UserProfile (보안 질문/답변)
+├── Favorite (즐겨찾기 레시피)
+│   └── FavoriteCategory (카테고리)
+├── RecentIngredient (최근 검색 재료)
+├── NewsLike (뉴스 좋아요)
+├── NewsScrap (뉴스 스크랩)
+└── RecipeView (레시피 조회수)
+```
+
+### 🔄 데이터 플로우
+```
+사용자 입력 → Django Views → AI Processing → Database → Response
+    ↓
+레시피 데이터 (CSV) → 검색/필터링 → 개인화 추천
+    ↓
+네이버 뉴스 API → 실시간 뉴스 수집
+```
+
+
+🔧 **핵심 구현 사항**
+- CSV 데이터 기반 레시피 데이터베이스 (24,000+ 레시피)
+- 사용자 행동 패턴 분석 (조회수, 즐겨찾기)
+- 실시간 추천 알고리즘
+
+📌 **관련 디렉토리**
+- `main/views.py`: 추천 로직 구현
+- `DATA/TB_RECIPE_SEARCH_241226.csv`: 레시피 데이터베이스
+
+---
+
+### 💬 2. AI 요리 상담 챗봇
+**GPT-3.5 기반 요리 전문 AI 어시스턴트**
+
+🛠️ **기술 스택**
+- **AI**: OpenAI GPT-3.5 Turbo
+- **Backend**: Django, Python
+- **Frontend**: JavaScript, AJAX
+- **Security**: CSRF Protection
+
+🎯 **주요 기능**
+- 🍳 **요리 상담**: 레시피, 조리법, 재료 관련 전문 답변
+- 🛡️ **콘텐츠 필터링**: 부적절한 내용 자동 필터링
+- 🌐 **한국어 최적화**: 요리 전문 용어 및 한국 요리 특성 반영
+- ⚡ **실시간 응답**: 비동기 처리로 빠른 응답 속도
+
+🔧 **핵심 구현 사항**
+- 시스템 프롬프트 엔지니어링: 요리사 AI 역할 정의
+- 토큰 제한: 400 토큰으로 간결한 답변 유도
+- 에러 핸들링: API 호출 실패 시 graceful degradation
+
+📌 **관련 디렉토리**
+- `main/views.py`: AI 챗봇 핵심 로직
+- `main/templates/ai_chat.html`: 챗봇 인터페이스
+
+---
+
+### 🥬 3. 내 냉장고 관리 시스템
+**개인 냉장고 재료 관리 및 레시피 검색**
+
+🛠️ **기술 스택**
+- **Backend**: Django, MySQL
+- **Frontend**: Bootstrap, JavaScript
+- **Data Processing**: Pandas, NumPy
+
+🎯 **주요 기능**
+- 📝 **재료 관리**: 개인 냉장고 재료 추가/삭제/관리
+- 🔍 **레시피 검색**: 보유 재료로 가능한 레시피 검색
+- 📊 **재료 통계**: 자주 사용하는 재료 분석
+- 🗑️ **일괄 삭제**: 전체 재료 초기화 기능
+
+🔧 **핵심 구현 사항**
+- 재료 기반 레시피 매칭 알고리즘
+- 최근 검색 재료 자동 저장
+- 사용자별 개인화된 재료 관리
+
+📌 **관련 디렉토리**
+- `main/views.py`: 냉장고 관리 로직
+- `main/templates/my_fridge.html`: 냉장고 인터페이스
+
+---
+
+### ⭐ 4. 즐겨찾기 및 카테고리 시스템
+**개인화된 레시피 즐겨찾기 관리**
+
+🛠️ **기술 스택**
+- **Backend**: Django, MySQL
+- **Frontend**: JavaScript, AJAX
+- **UI**: Bootstrap
+
+🎯 **주요 기능**
+- ❤️ **즐겨찾기**: 관심 레시피 즐겨찾기 등록/해제
+- 📁 **카테고리 관리**: 개인 카테고리 생성/삭제/관리
+- 🏷️ **태그 시스템**: 카테고리별 레시피 분류
+- 📊 **즐겨찾기 통계**: 카테고리별 레시피 현황
+
+🔧 **핵심 구현 사항**
+- 다대다 관계 모델링 (Favorite ↔ FavoriteCategory)
+- 실시간 AJAX 기반 즐겨찾기 토글
+- 사용자별 개인 카테고리 관리
+
+📌 **관련 디렉토리**
+- `main/models.py`: 즐겨찾기 모델 정의
+- `main/views.py`: 즐겨찾기 관리 로직
+
+---
+
+### 📰 5. 요리 뉴스 시스템
+**실시간 요리 관련 뉴스 수집 및 공유**
+
+🛠️ **기술 스택**
+- **External API**: 네이버 뉴스 API
+- **Backend**: Django, Python
+- **Frontend**: Bootstrap, JavaScript
+- **Data Processing**: JSON, HTML 파싱
+
+🎯 **주요 기능**
+- 📰 **실시간 뉴스**: 네이버 뉴스 API 기반 요리 뉴스 수집
+- 🔍 **뉴스 검색**: 키워드 기반 뉴스 검색
+- 👍 **소셜 기능**: 뉴스 좋아요, 스크랩 기능
+- 📱 **페이지네이션**: 대용량 뉴스 데이터 효율적 표시
+
+🔧 **핵심 구현 사항**
+- 네이버 뉴스 API 통합
+- HTML 태그 제거 및 데이터 정제
+- 사용자별 좋아요/스크랩 상태 관리
+- 페이지네이션 및 검색 기능
+
+📌 **관련 디렉토리**
+- `main/views.py`: 뉴스 검색 및 관리 로직
+- `main/templates/news_search.html`: 뉴스 인터페이스
+
+---
+
+### 👤 6. 사용자 관리 시스템
+**완전한 사용자 인증 및 프로필 관리**
+
+🛠️ **기술 스택**
+- **Backend**: Django, MySQL
+- **Authentication**: Django Custom User Model
+- **Security**: Argon2 Password Hashing
+- **File Handling**: Pillow
+
+🎯 **주요 기능**
+- 🔐 **사용자 인증**: 회원가입, 로그인, 로그아웃
+- 🔍 **계정 찾기**: 아이디/비밀번호 찾기 (보안 질문)
+- 👤 **프로필 관리**: 사용자 정보 관리
+- 🛡️ **보안 강화**: Argon2 해시, 세션 관리
+
+🔧 **핵심 구현 사항**
+- 커스텀 유저 프로필 모델
+- 보안 질문/답변 기반 비밀번호 찾기
+- 중복 검사 (아이디, 이메일)
+
+📌 **관련 디렉토리**
+- `main/models.py`: 사용자 모델 정의
+- `main/views.py`: 인증 로직
+- `main/templates/`: 인증 관련 템플릿
+
+---
+
+## 🏗️ 시스템 아키텍처 & DevOps
+
+### 🛠️ 인프라 구성
+- **서버**: AWS EC2 (Ubuntu 22.04)
+- **데이터베이스**: MySQL 8.0
+- **웹서버**: Django Development Server
+- **스케줄링**: APScheduler (백그라운드 작업)
+
+### 🔧 자동화 시스템
+- **데이터 수집**: 뉴스 API 자동 수집
+- **사용자 활동**: 조회수, 즐겨찾기 통계 자동 업데이트
+- **데이터베이스 관리**: 자동 백업 및 정리
+
+### 📊 데이터 파이프라인
+```
+외부 API (네이버뉴스) 
+    ↓
+데이터 수집 (Django Views)
+    ↓
+전처리 및 데이터 정제
+    ↓
+데이터베이스 저장 (MySQL)
+    ↓
+웹 인터페이스 제공
+```
+
+---
+
+## 🔐 보안/접근 관련 안내
+
+본 저장소는 일부 API 키, 민감한 경로 등은 제거된 상태로 제공됩니다.
+전체 실행 환경/설정이 필요하신 경우, 아래 연락처 또는 이력서에 명시된 인증 키를 통해 전체 접근 권한을 요청하실 수 있습니다.
+
+📩 **Contact**: sungjun94@gmail.com  
+🔑 **Resume Key Access**: 이력서 내 별도 안내 참고
+
+---
+
+## 🧠 Why This Portfolio?
+
+### 💼 실무 중심 프로젝트 구조
+- **풀스택 개발 경험**: Frontend부터 Backend, AI/ML까지 전체 스택 구현
+- **실제 서비스 배포**: AWS EC2 기반 실제 운영 환경 구축
+- **데이터 엔지니어링**: CSV 데이터 처리 및 API 통합
+
+### 🤖 AI/ML 전문성
+- **자연어 처리**: GPT-3.5 API를 활용한 전문 챗봇 개발
+- **추천 시스템**: 사용자 행동 기반 개인화 추천 알고리즘
+- **데이터 분석**: 레시피 데이터 전처리 및 분석
+
+### 🔄 자동화 및 운영
+- **API 통합**: 네이버 뉴스 API 등 외부 서비스 통합
+- **데이터 파이프라인**: 실시간 데이터 수집 및 처리 시스템
+- **모니터링**: 로깅 및 에러 핸들링 시스템
+
+### 🌐 현대적 웹 개발
+- **반응형 디자인**: Bootstrap 기반 모바일 최적화
+- **실시간 인터랙션**: AJAX 기반 비동기 데이터 처리
+- **사용자 경험**: 직관적인 UI/UX 설계
+
+---
+
+## 📈 프로젝트 성과 및 기술적 도전
+
+### 🎯 주요 성과
+- **개인화 추천**: 사용자 취향 기반 맞춤형 레시피 추천 시스템
+- **실시간 시스템**: 24/7 자동 뉴스 수집 및 업데이트
+- **사용자 중심 설계**: 요리 애호가 관점에서 필요한 기능 우선 구현
+
+### 🚀 기술적 도전과 해결
+- **대용량 데이터 처리**: 24,000+ 레시피 데이터 효율적 처리
+- **실시간 추천**: 사용자 요청 시 즉시 개인화 추천 제공
+- **API 통합**: 네이버 뉴스 API 등 다양한 외부 서비스 통합
+- **사용자 경험 최적화**: 직관적인 인터페이스 및 빠른 응답 속도
+
+---
+
+## 🎥 프로젝트 영상 시연 보기
+
+[📺 Click to watch demo](링크 추가 예정)
+
+---
+
+## 📁 프로젝트 구조
+
+```
+recipy/
+├── dashboard/                 # Django 프로젝트 설정
+│   ├── settings.py           # 프로젝트 설정
+│   ├── urls.py               # 메인 URL 설정
+│   └── wsgi.py               # WSGI 설정
+├── main/                     # 메인 애플리케이션
+│   ├── models.py             # 데이터베이스 모델
+│   ├── views.py              # 뷰 로직
+│   ├── urls.py               # URL 라우팅
+│   ├── templates/            # HTML 템플릿
+│   └── migrations/           # 데이터베이스 마이그레이션
+├── DATA/                     # 레시피 데이터
+│   └── TB_RECIPE_SEARCH_241226.csv
+├── static/                   # 정적 파일
+│   └── images/               # 이미지 파일
+├── requirements.txt          # Python 의존성
+└── manage.py                # Django 관리 스크립트
+```
+
+---
+
+
 
 프로젝트 하나하나에 담긴 고민과 집념을 통해 더 큰 가치를 만들고자 했습니다.
 
