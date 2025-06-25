@@ -28,7 +28,7 @@
 9. [📈 프로젝트 성과 및 기술적 도전](#-프로젝트-성과-및-기술적-도전)
 
 ### 🎥 프로젝트 영상 시연 보기
-[📺 Click to watch demo]([https://youtu.be/your_video_link](https://youtu.be/6NkhwH9_ngU)) 
+[📺 Click to watch demo](https://youtu.be/6NkhwH9_ngU)) 
 
 ---
 
